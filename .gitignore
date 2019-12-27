@@ -93,3 +93,5 @@ external/
 draws/
 plot/
 
+### keep empty folders
+!.gitkeep
