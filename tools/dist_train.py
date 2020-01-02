@@ -23,8 +23,8 @@ import torch.nn.parallel
 import torch.optim
 import torch.utils.data
 import torch.utils.data.distributed
-from tensorboardX import SummaryWriter
-
+# from tensorboardX import SummaryWriter
+from torch.utils.tensorboard import SummaryWriter
 import _init_paths
 import models
 
@@ -77,7 +77,8 @@ def parse_args():
 
 
 def main():
-    args = parse_args()
+    args_input = ["CUDA_VISIBLE_DEVICES=0,1", "--cfg ", "experiments/coco/higher_hrnet/w32_512_adam_lr1e-3.yaml"]
+    args = parse_args(args_input)
     update_config(cfg, args)
 
     cfg.defrost()
