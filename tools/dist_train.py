@@ -77,8 +77,9 @@ def parse_args():
 
 
 def main():
-    args_input = ["CUDA_VISIBLE_DEVICES=0,1", "--cfg ", "experiments/coco/higher_hrnet/w32_512_adam_lr1e-3.yaml"]
-    args = parse_args(args_input)
+    # args_input = ["CUDA_VISIBLE_DEVICES=0,1", "--cfg ", "experiments/coco/higher_hrnet/w32_512_adam_lr1e-3.yaml"]
+    # args = parse_args(args_input)
+    args = parse_args()
     update_config(cfg, args)
 
     cfg.defrost()
